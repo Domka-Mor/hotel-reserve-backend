@@ -33,7 +33,7 @@ app.use(
   })
 );
 
-mongoose.connect("mongodb+srv://"+ process.env.MONGO_ATLAS_PW +"@hotel-reserve-sys.vhpfr.mongodb.net/hotel-reserve-sys?retryWrites=true&w=majority",{ useNewUrlParser: true, useUnifiedTopology: true }
+mongoose.connect("mongodb+srv://Dominika:dominika0901@hotel-reserve-sys.vhpfr.mongodb.net/hotel-reserve-sys?retryWrites=true&w=majority",{ useNewUrlParser: true, useUnifiedTopology: true }
 	).then(() => {
 		app.listen(process.env.PORT || 3000);
 		console.log("pripojeny");
