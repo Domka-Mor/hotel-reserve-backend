@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const graphqlHttp = require('express-graphql');
 const mongoose = require('mongoose');
+const PORT = process.env.PORT || 3000;
 
 const graphQlSchema = require('./graphql/schema/index');
 const graphQlResolvers = require('./graphql/resolvers/index');
@@ -35,8 +36,9 @@ app.use(
 
 mongoose.connect("mongodb+srv://dominikamoravicova:"+ process.env.MONGO_ATLAS_PW +"@hotelreserve.vm6kenc.mongodb.net/?retryWrites=true&w=majority",{ useNewUrlParser: true, useUnifiedTopology: true }
 	).then(() => {
-		app.listen(process.env.PORT || 10000);
+		app.listen(PORT);
 		console.log("pripojeny");
+    console.log(`server started on port ${PORT}`);
 	}).catch(err => {
 		console.log(err);
 	});
