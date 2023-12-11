@@ -35,7 +35,7 @@ app.use(
 
 mongoose.connect("mongodb+srv://dominikamoravicova:"+ process.env.MONGO_ATLAS_PW +"@hotelreserve.vm6kenc.mongodb.net/?retryWrites=true&w=majority",{ useNewUrlParser: true, useUnifiedTopology: true }
 	).then(() => {
-		app.listen(process.env.PORT || 3000);
+		app.listen(process.env.PORT || 10000);
 		console.log("pripojeny");
 	}).catch(err => {
 		console.log(err);
