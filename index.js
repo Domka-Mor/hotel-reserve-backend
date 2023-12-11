@@ -33,9 +33,7 @@ app.use(
   })
 );
 
-// "mongodb+srv://dominikamoravicova:"+ process.env.MONGO_ATLAS_PW +"@hotelreserve.vm6kenc.mongodb.net/?retryWrites=true&w=majority"
-
-mongoose.connect("mongodb+srv://dominikamoravicova:dominika0901@hotelreserve.vm6kenc.mongodb.net/?retryWrites=true&w=majority",{ useNewUrlParser: true, useUnifiedTopology: true }
+mongoose.connect("mongodb+srv://dominikamoravicova:"+ process.env.MONGO_ATLAS_PW +"@hotelreserve.vm6kenc.mongodb.net/?retryWrites=true&w=majority",{ useNewUrlParser: true, useUnifiedTopology: true }
 	).then(() => {
 		app.listen(process.env.PORT || 3000);
 		console.log("pripojeny");
